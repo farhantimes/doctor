@@ -1,0 +1,334 @@
+/* ==========================================================================
+   MedClinic Universal - Responsive Breakpoint Rules
+   Comprehensive Mobile-First Coverage
+   Tested Breakpoints: 320px, 360px, 375px, 390px, 430px, 768px, 1024px, 1440px, 1920px
+   ========================================================================== */
+
+/* 1. Large Displays (1441px & Above) */
+@media (min-width: 1441px) {
+  .clinic-container {
+    max-width: 1360px;
+  }
+  .clinic-hero__title {
+    font-size: 3.25rem;
+  }
+}
+
+/* 2. Tablet Landscape & Small Laptops (1024px and Below) */
+@media (max-width: 1024px) {
+  /* Navigation: Collapse to Mobile Drawer */
+  .clinic-nav {
+    display: none !important;
+  }
+  .clinic-nav-toggle {
+    display: flex !important;
+  }
+  .clinic-header__call-btn {
+    display: none !important;
+  }
+
+  /* Sticky Mobile Bar */
+  .clinic-mobile-bar {
+    display: flex;
+  }
+  body {
+    padding-bottom: 4.25rem;
+  }
+
+  /* Hero Section */
+  .clinic-hero__inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+
+  /* Grid Reductions */
+  .clinic-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .clinic-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .clinic-facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .clinic-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .clinic-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .clinic-doctor-profile-card {
+    grid-template-columns: 320px 1fr;
+  }
+
+  .d-none-tablet {
+    display: none !important;
+  }
+}
+
+/* 3. Tablet Portrait (900px and Below) */
+@media (max-width: 900px) {
+  .clinic-section {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  /* Hero Stacking */
+  .clinic-hero {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .clinic-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .clinic-hero__media {
+    order: -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Hero Badges: Strict In-Bounds Placement */
+  .clinic-hero__float-card--doctor {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: auto;
+    max-width: calc(100% - 1.5rem);
+  }
+  .clinic-hero__float-card--status {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  /* Intro & Doctor Stacking */
+  .clinic-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .clinic-doctor-profile-card {
+    grid-template-columns: 1fr;
+  }
+  .clinic-doctor-profile-card__img {
+    height: 340px;
+  }
+
+  /* Location Stacking */
+  .clinic-location-card {
+    grid-template-columns: 1fr;
+  }
+  .clinic-location-card__info {
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+  }
+  .clinic-map-placeholder {
+    min-height: 260px;
+    border-left: none;
+    border-top: 1px solid var(--clinic-border);
+  }
+
+  /* Appointment Layout Stacking */
+  .clinic-appointment-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0 2.5rem;
+  }
+  .clinic-appointment-form-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  /* Top Bar Utility Adjustments */
+  .clinic-top-bar__hours {
+    display: none !important;
+  }
+}
+
+/* 4. Large Mobile (640px and Below) */
+@media (max-width: 640px) {
+  /* Grids collapse to single columns */
+  .clinic-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .clinic-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .clinic-facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .clinic-reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .clinic-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Header CTA Button Text: Compact "Book" on Mobile */
+  .clinic-header__cta-btn .cta-text-full {
+    display: none;
+  }
+  .clinic-header__cta-btn .cta-text-short {
+    display: inline;
+  }
+
+  /* Hero Actions: Full Width Stack */
+  .clinic-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .clinic-hero__actions .clinic-btn {
+    width: 100%;
+  }
+
+  /* Form Grid: 1 Column */
+  .clinic-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .clinic-doctor-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* CTA Banner */
+  .clinic-cta-banner__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .clinic-cta-banner__actions .clinic-btn {
+    width: 100%;
+  }
+
+  /* Hide Top Strip on Narrow Mobile (Mobile bar already provides 1-tap call & WA) */
+  .clinic-top-bar {
+    display: none;
+  }
+
+  /* Demo Concept Notice */
+  .clinic-demo-bar__text {
+    display: none;
+  }
+  .clinic-demo-bar__inner {
+    justify-content: space-between;
+  }
+
+  /* Footer Bottom */
+  .clinic-footer__bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}
+
+/* 5. Standard Mobile (430px and Below - iPhone 16 Pro Max / 15 / 14) */
+@media (max-width: 430px) {
+  .clinic-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .clinic-appointment-form-card {
+    padding: 1.25rem 1rem;
+  }
+  .clinic-hero__trust {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .clinic-trust-item__divider {
+    display: none;
+  }
+  .clinic-trust-item__num {
+    font-size: 1.35rem;
+  }
+  .clinic-trust-item__label {
+    font-size: 0.75rem;
+  }
+
+  /* Compact Doctor Card on Hero Image */
+  .clinic-hero__float-card--doctor {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+  .clinic-hero__float-card--doctor .clinic-doctor-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .clinic-hero__float-card--doctor strong {
+    font-size: 0.8125rem;
+  }
+  .clinic-hero__float-card--doctor span {
+    font-size: 0.6875rem;
+  }
+}
+
+/* 6. Compact Mobile (390px and Below - iPhone 14/15/SE) */
+@media (max-width: 390px) {
+  .clinic-name {
+    font-size: 1.05rem;
+  }
+  .clinic-tagline {
+    font-size: 0.6875rem;
+  }
+  .clinic-header__cta-btn {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.8125rem;
+  }
+  .clinic-nav-toggle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 6px;
+  }
+}
+
+/* 7. Ultra-Compact Mobile (360px and Below - Compact Android & 320px) */
+@media (max-width: 360px) {
+  .clinic-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .clinic-tagline {
+    display: none; /* Give clinic name maximum room without wrapping 4 times */
+  }
+  .clinic-name {
+    font-size: 0.95rem;
+  }
+  .clinic-logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .clinic-hero__float-card--status {
+    display: none; /* Hide top badge on 320-360px for clean photo display */
+  }
+  .clinic-hero__float-card--doctor {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    max-width: calc(100% - 1rem);
+  }
+  .clinic-appointment-form-card {
+    padding: 1rem 0.75rem;
+  }
+  .clinic-input,
+  .clinic-select,
+  .clinic-textarea {
+    font-size: 15px;
+    padding: 0.55rem 0.75rem;
+  }
+}

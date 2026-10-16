@@ -1,0 +1,133 @@
+/*
+Theme Name: MedClinic Universal
+Theme URI: https://example.com/medclinic-universal
+Author: Universal Medical Systems
+Author URI: https://example.com/
+Description: Premium, fully responsive, reusable WordPress website system for doctors, dentists, dermatologists, physiotherapists, gynaecologists, and multi-speciality medical clinics. Features centralized branding controls, 6 specialty presets, 1-click rebranding workflow, Gutenberg block patterns, and appointment booking flow.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: medclinic-universal
+Tags: medical, clinic, doctor, dentist, healthcare, block-patterns, custom-colors, full-site-editing, one-column, two-columns, responsive-layout
+*/
+
+:root {
+  /* Default Clinical Palette: Clean Medical Teal & Deep Slate Navy */
+  --clinic-primary: #0d9488;
+  --clinic-primary-dark: #0f766e;
+  --clinic-primary-light: #ccfbf1;
+  --clinic-primary-subtle: #f0fdfa;
+  
+  --clinic-secondary: #0f172a;
+  --clinic-secondary-light: #1e293b;
+  --clinic-accent: #0284c7;
+  --clinic-accent-light: #e0f2fe;
+  
+  --clinic-bg: #ffffff;
+  --clinic-bg-alt: #f8fafc;
+  --clinic-bg-card: #ffffff;
+  --clinic-border: #e2e8f0;
+  --clinic-border-subtle: #f1f5f9;
+  
+  --clinic-text: #1e293b;
+  --clinic-text-muted: #64748b;
+  --clinic-text-light: #94a3b8;
+  
+  --clinic-success: #16a34a;
+  --clinic-warning: #eab308;
+  --clinic-danger: #dc2626;
+  
+  --clinic-font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --clinic-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  --clinic-radius-sm: 6px;
+  --clinic-radius-md: 10px;
+  --clinic-radius-lg: 16px;
+  --clinic-radius-xl: 24px;
+  --clinic-radius-full: 9999px;
+  
+  --clinic-shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --clinic-shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --clinic-shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --clinic-shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  
+  --clinic-container: 1240px;
+  --clinic-container-narrow: 860px;
+  --clinic-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--clinic-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--clinic-text);
+  background-color: var(--clinic-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--clinic-primary);
+  text-decoration: none;
+  transition: var(--clinic-transition);
+}
+
+a:hover {
+  color: var(--clinic-primary-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--clinic-font-heading);
+  color: var(--clinic-secondary);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--clinic-primary);
+  color: #ffffff;
+  padding: 8px 16px;
+  z-index: 10000;
+  border-radius: 0 0 var(--clinic-radius-sm) 0;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--clinic-primary);
+  outline-offset: 3px;
+}

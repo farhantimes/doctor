@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request an Appointment | [CLINIC NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="stylesheet" href="assets/css/appointment-form.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Slim Announcement / News Ticker Strip -->
+  <aside class="clinic-ticker" aria-label="Clinic Announcements">
+    <div class="clinic-ticker__inner">
+      <span class="clinic-ticker__badge">
+        <span class="clinic-ticker__dot" aria-hidden="true"></span>
+        <span>Notice</span>
+      </span>
+      <div class="clinic-ticker__viewport">
+        <div class="clinic-ticker__track">
+          <div class="clinic-ticker__group">
+            <span class="clinic-ticker__item">Appointment requests are welcome.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Clinic Hours: <span data-clinic-var="opening_hours">Mon - Fri: 8:00 AM - 6:30 PM | Sat: 9:00 AM - 2:00 PM</span></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Contact clinic for appointment assistance: <a href="tel:+15552345678" style="color:inherit;text-decoration:underline;" data-clinic-var="phone">+1 (555) 234-5678</a></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Explore our comprehensive medical services.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+          </div>
+          <div class="clinic-ticker__group" aria-hidden="true">
+            <span class="clinic-ticker__item">Appointment requests are welcome.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Clinic Hours: <span data-clinic-var="opening_hours">Mon - Fri: 8:00 AM - 6:30 PM | Sat: 9:00 AM - 2:00 PM</span></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Contact clinic for appointment assistance: <a href="tel:+15552345678" style="color:inherit;text-decoration:underline;" data-clinic-var="phone">+1 (555) 234-5678</a></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Explore our comprehensive medical services.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="site-header" class="clinic-header" role="banner">
+    <div class="clinic-container clinic-header__inner">
+      <div class="clinic-header__brand">
+        <a href="index.html" class="clinic-logo-link" rel="home">
+          <span class="clinic-logo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+          <span class="clinic-logo-text">
+            <span class="clinic-name" data-clinic-var="clinic_name">[CLINIC NAME]</span>
+            <span class="clinic-tagline" data-clinic-var="specialty">Doctor &amp; Clinic Website Demo</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="clinic-nav" role="navigation">
+        <ul class="clinic-nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Clinic</a></li>
+          <li><a href="doctor.html">Doctors</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="faq.html">Patient FAQs</a></li>
+          <li><a href="contact.html">Location &amp; Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="clinic-header__actions">
+        <a href="tel:+15552345678" class="clinic-header__phone d-none-tablet" title="Call Clinic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-clinic-var="phone">+1 (555) 234-5678</span>
+        </a>
+        <a href="appointment.html" class="clinic-btn clinic-btn--primary clinic-header__cta-btn" aria-label="Request Appointment">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="cta-text-full">Book Appointment</span>
+          <span class="cta-text-short">Book</span>
+        </a>
+        <button class="clinic-nav-toggle" id="clinic-nav-toggle" aria-expanded="false" aria-controls="clinic-mobile-drawer" aria-label="Toggle navigation menu">
+          <span class="clinic-nav-toggle__bar"></span>
+          <span class="clinic-nav-toggle__bar"></span>
+          <span class="clinic-nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="clinic-mobile-drawer" class="clinic-mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="clinic-mobile-drawer__overlay" id="clinic-drawer-overlay"></div>
+    <div class="clinic-mobile-drawer__content">
+      <div class="clinic-mobile-drawer__header">
+        <span class="clinic-name" data-clinic-var="clinic_name">[CLINIC NAME]</span>
+        <button class="clinic-mobile-drawer__close" id="clinic-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="clinic-mobile-drawer__body">
+        <ul class="clinic-mobile-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Clinic</a></li>
+          <li><a href="doctor.html">Our Doctors</a></li>
+          <li><a href="service.html">Services &amp; Treatments</a></li>
+          <li><a href="faq.html">Patient FAQs</a></li>
+          <li><a href="contact.html">Location &amp; Timings</a></li>
+          <li><a href="appointment.html">Request Appointment</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+
+        <div class="clinic-mobile-drawer__actions">
+          <a href="appointment.html" class="clinic-btn clinic-btn--primary clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Request Appointment</span>
+          </a>
+          <a href="tel:+15552345678" class="clinic-btn clinic-btn--outline clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call: <span data-clinic-var="phone">+1 (555) 234-5678</span></span>
+          </a>
+          <a href="https://wa.me/15552345678" target="_blank" rel="noopener noreferrer" class="clinic-btn clinic-btn--whatsapp clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="clinic-page clinic-page--appointment" role="main">
+    <div class="clinic-page-header">
+      <div class="clinic-container clinic-text-center">
+        <span class="clinic-section-kicker">Patient Scheduling</span>
+        <h1 class="clinic-page-title">Request a Consultation Appointment</h1>
+        <p class="clinic-page-subtitle">
+          Fill out the confidential form below. Our clinic coordinator will review your preferred slot and confirm your booking via phone call or WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="clinic-container clinic-appointment-container">
+      <div class="clinic-appointment-layout">
+        
+        <!-- Left: Appointment Form -->
+        <div class="clinic-appointment-form-card">
+          <div class="clinic-appointment-form-card__header">
+            <h3>Appointment Request Form</h3>
+            <p class="clinic-text-muted">
+              Please provide basic contact and scheduling preferences. No sensitive medical records are required at this stage.
+            </p>
+          </div>
+
+          <form id="clinic-appointment-form" class="clinic-form" novalidate>
+            <input type="hidden" name="action" value="submit_appointment_request">
+            <input type="hidden" name="clinic_nonce" value="demo_nonce_val">
+            <div style="display:none;" aria-hidden="true">
+              <input type="text" id="clinic_hp_check" name="clinic_hp_check" tabindex="-1">
+            </div>
+
+            <div class="clinic-form-grid">
+              <div class="clinic-form-group">
+                <label for="patient_name" class="clinic-label">Patient Full Name <span class="clinic-required">*</span></label>
+                <input type="text" id="patient_name" name="patient_name" class="clinic-input" placeholder="e.g. Eleanor Vance" required>
+                <span class="clinic-error-msg" id="patient_name_error"></span>
+              </div>
+
+              <div class="clinic-form-group">
+                <label for="patient_phone" class="clinic-label">Contact Phone Number <span class="clinic-required">*</span></label>
+                <input type="tel" id="patient_phone" name="patient_phone" class="clinic-input" placeholder="e.g. +1 (555) 019-2834" required>
+                <span class="clinic-error-msg" id="patient_phone_error"></span>
+              </div>
+            </div>
+
+            <div class="clinic-form-grid">
+              <div class="clinic-form-group">
+                <label for="preferred_doctor" class="clinic-label">Preferred Doctor / Clinician</label>
+                <select id="preferred_doctor" name="preferred_doctor" class="clinic-select">
+                  <option value="Dr. Jonathan Miller, MD" data-clinic-var="doctor_name">Attending Physician</option>
+                  <option value="First Available Doctor">First Available Consulting Specialist</option>
+                </select>
+              </div>
+
+              <div class="clinic-form-group">
+                <label for="appointment_type" class="clinic-label">Consultation Type</label>
+                <select id="appointment_type" name="appointment_type" class="clinic-select">
+                  <option value="In-Clinic General Consultation">In-Clinic Comprehensive Consultation</option>
+                  <option value="Preventive Health Checkup">Preventive Health Checkup</option>
+                  <option value="Follow-Up Review">Follow-Up Review</option>
+                  <option value="Specialist Procedural Assessment">Specialist Procedural Assessment</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="clinic-form-grid">
+              <div class="clinic-form-group">
+                <label for="preferred_date" class="clinic-label">Preferred Date <span class="clinic-required">*</span></label>
+                <input type="date" id="preferred_date" name="preferred_date" class="clinic-input" required>
+                <span class="clinic-error-msg" id="preferred_date_error"></span>
+              </div>
+
+              <div class="clinic-form-group">
+                <label for="preferred_time" class="clinic-label">Preferred Time Window <span class="clinic-required">*</span></label>
+                <select id="preferred_time" name="preferred_time" class="clinic-select" required>
+                  <option value="">Select Time Window</option>
+                  <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+                  <option value="Afternoon (12:00 PM - 3:00 PM)">Afternoon (12:00 PM - 3:00 PM)</option>
+                  <option value="Evening (3:00 PM - 6:00 PM)">Evening (3:00 PM - 6:00 PM)</option>
+                </select>
+                <span class="clinic-error-msg" id="preferred_time_error"></span>
+              </div>
+            </div>
+
+            <div class="clinic-form-group">
+              <label for="admin_message" class="clinic-label">Short Administrative Note (Optional)</label>
+              <textarea id="admin_message" name="admin_message" rows="3" class="clinic-textarea" placeholder="Brief non-confidential note (e.g. 'First time patient', 'Wheelchair assistance requested'). Please do not submit extensive personal medical histories here."></textarea>
+            </div>
+
+            <div class="clinic-form-group clinic-form-group--checkbox">
+              <label class="clinic-checkbox-label">
+                <input type="checkbox" id="patient_consent" name="patient_consent" value="1" required>
+                <span>
+                  I understand that this form is an <strong>appointment request</strong> and not a guaranteed booking until confirmed by clinic reception. I agree to the <a href="privacy-policy.html" target="_blank">Patient Privacy Policy</a>. <span class="clinic-required">*</span>
+                </span>
+              </label>
+              <span class="clinic-error-msg" id="patient_consent_error"></span>
+            </div>
+
+            <div id="clinic-form-status" class="clinic-form-status" style="display:none;" role="alert"></div>
+
+            <div class="clinic-form-actions">
+              <button type="submit" id="clinic-submit-btn" class="clinic-btn clinic-btn--primary clinic-btn--lg clinic-btn--full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Submit Appointment Request</span>
+              </button>
+            </div>
+
+            <p class="clinic-form-security-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Encrypted SSL Transmission &bull; Confidential Data Handling &bull; HIPAA Conscious Standards</span>
+            </p>
+          </form>
+        </div>
+
+        <!-- Right: Information Sidebar -->
+        <div class="clinic-appointment-sidebar">
+          <div class="clinic-sidebar-card">
+            <h4>How Your Booking Works</h4>
+            <ol class="clinic-steps-list">
+              <li>
+                <span class="clinic-step-num">1</span>
+                <div>
+                  <strong>Request Submission</strong>
+                  <p>Select your preferred specialist and scheduling window.</p>
+                </div>
+              </li>
+              <li>
+                <span class="clinic-step-num">2</span>
+                <div>
+                  <strong>Coordinator Verification</strong>
+                  <p>Our reception reviews doctor availability and diary capacity.</p>
+                </div>
+              </li>
+              <li>
+                <span class="clinic-step-num">3</span>
+                <div>
+                  <strong>Prompt Confirmation</strong>
+                  <p>You receive confirmation via phone or WhatsApp with visit preparation guidelines.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="clinic-sidebar-card clinic-sidebar-card--whatsapp">
+            <h4>Prefer Instant Scheduling?</h4>
+            <p>Message our appointment desk directly on WhatsApp for real-time coordinator response.</p>
+            <a href="https://wa.me/15552345678" target="_blank" rel="noopener noreferrer" class="clinic-btn clinic-btn--whatsapp clinic-btn--full">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <span>WhatsApp Quick Booking</span>
+            </a>
+          </div>
+
+          <div class="clinic-sidebar-card clinic-sidebar-card--hours">
+            <h4>Clinic Operating Hours</h4>
+            <p class="clinic-mb-2"><strong>Monday - Friday:</strong> 8:00 AM - 6:30 PM</p>
+            <p class="clinic-mb-2"><strong>Saturday:</strong> 9:00 AM - 2:00 PM</p>
+            <p class="clinic-text-muted"><strong>Sunday:</strong> Urgent / On-Call Care Only</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer id="site-footer" class="clinic-footer" role="contentinfo">
+    <div class="clinic-container clinic-footer__top">
+      <div class="clinic-footer__grid">
+        <!-- Col 1 -->
+        <div class="clinic-footer__col clinic-footer__col--brand">
+          <div class="clinic-footer__logo">
+            <span class="clinic-logo-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+            <span class="clinic-name" data-clinic-var="clinic_name">[CLINIC NAME]</span>
+          </div>
+          <p class="clinic-footer__desc">
+            <span data-clinic-var="specialty">Medical Practice</span> providing evidence-based medical consultations, modern diagnostic standards, and personalized patient care with compassionate excellence.
+          </p>
+          <div class="clinic-footer__accreditation">
+            <span class="clinic-pill-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Verified Medical Facility Standards</span>
+            </span>
+          </div>
+          <div class="clinic-footer__demo-note">
+            <small><strong>Note:</strong> <span data-clinic-var="demo_badge_text">Website Concept Demo</span>. For prospective client presentation.</small>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="clinic-footer__col">
+          <h4 class="clinic-footer__heading">Practice &amp; Care</h4>
+          <ul class="clinic-footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Clinic</a></li>
+            <li><a href="doctor.html">Medical Doctors</a></li>
+            <li><a href="service.html">Services &amp; Treatments</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="appointment.html">Request Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="clinic-footer__col">
+          <h4 class="clinic-footer__heading">Consultation Timings</h4>
+          <div class="clinic-timings-card">
+            <div class="clinic-timings-row">
+              <span class="clinic-timings-day">Monday - Friday</span>
+              <span class="clinic-timings-hours">8:00 AM - 6:30 PM</span>
+            </div>
+            <div class="clinic-timings-row">
+              <span class="clinic-timings-day">Saturday</span>
+              <span class="clinic-timings-hours">9:00 AM - 2:00 PM</span>
+            </div>
+            <div class="clinic-timings-row clinic-timings-row--muted">
+              <span class="clinic-timings-day">Sunday</span>
+              <span class="clinic-timings-hours">Emergency / On-Call</span>
+            </div>
+          </div>
+          <p class="clinic-footer__note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Prior appointment recommended for thorough consultation. Walk-ins prioritized by triage acuity.</span>
+          </p>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="clinic-footer__col">
+          <h4 class="clinic-footer__heading">Clinic Location</h4>
+          <address class="clinic-footer__address">
+            <p class="clinic-address-text">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>
+                <span data-clinic-var="address">Suite 400, Medical Arts Pavilion</span><br>
+                <span data-clinic-var="city_state_zip">Healthcare Blvd, MC 90210</span>
+              </span>
+            </p>
+            <p class="clinic-footer__contact-line">
+              <a href="tel:+15552345678">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span data-clinic-var="phone">+1 (555) 234-5678</span>
+              </a>
+            </p>
+            <p class="clinic-footer__contact-line">
+              <a href="mailto:care@clinicdemocare.org">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span data-clinic-var="email">care@clinicdemocare.org</span>
+              </a>
+            </p>
+          </address>
+          <div class="clinic-footer__directions-link">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="clinic-btn clinic-btn--sm clinic-btn--ghost">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span>Get Directions on Map &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical & Legal Disclaimer Strip -->
+    <div class="clinic-footer__disclaimer">
+      <div class="clinic-container">
+        <p>
+          <strong>Medical Notice &amp; Patient Advisory:</strong> The medical, health and clinical information presented on this website is strictly for general informational and educational purposes. It does not constitute medical diagnosis, personalized treatment advice, or formal clinical care. Always consult directly with our certified healthcare practitioners or your primary physician regarding medical conditions or symptoms. In case of emergency, immediately contact your local emergency response or hospital.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="clinic-footer__bottom">
+      <div class="clinic-container clinic-footer__bottom-inner">
+        <p class="clinic-footer__copy">
+          &copy; <span id="clinic-year">2026</span> <span data-clinic-var="clinic_name">[CLINIC NAME]</span>. All Rights Reserved.
+        </p>
+        <div class="clinic-footer__legal-links">
+          <a href="privacy-policy.html">Privacy Policy &amp; Patient Rights</a>
+          <span class="clinic-divider">&bull;</span>
+          <a href="faq.html">Patient FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Action Bar (Sticky Call, WhatsApp, Book) -->
+  <div class="clinic-mobile-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+15552345678" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/15552345678" target="_blank" rel="noopener noreferrer" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--whatsapp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="appointment.html" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--book">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Visit</span>
+    </a>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="clinic-confirmation-modal" class="clinic-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="clinic-modal__backdrop"></div>
+    <div class="clinic-modal__dialog">
+      <div class="clinic-modal__icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="clinic-modal__title">Appointment Request Received</h3>
+      <p class="clinic-modal__message" id="clinic-modal-message">
+        Thank you! Your appointment request has been transmitted to our clinic coordinator.
+      </p>
+      <div class="clinic-modal__summary" id="clinic-modal-summary"></div>
+      <div class="clinic-modal__actions">
+        <a href="#" id="clinic-modal-whatsapp-btn" target="_blank" rel="noopener noreferrer" class="clinic-btn clinic-btn--whatsapp clinic-btn--full">
+          <span>Confirm Instantly via WhatsApp &rarr;</span>
+        </a>
+        <button type="button" id="clinic-modal-close" class="clinic-btn clinic-btn--ghost clinic-btn--full">
+          <span>Done / Return to Website</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/clinic-main.js"></script>
+  <script src="assets/js/preview-engine.js"></script>
+</body>
+</html>

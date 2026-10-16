@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attending Doctor Profile | [CLINIC NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="stylesheet" href="assets/css/appointment-form.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Slim Announcement / News Ticker Strip -->
+  <aside class="clinic-ticker" aria-label="Clinic Announcements">
+    <div class="clinic-ticker__inner">
+      <span class="clinic-ticker__badge">
+        <span class="clinic-ticker__dot" aria-hidden="true"></span>
+        <span>Notice</span>
+      </span>
+      <div class="clinic-ticker__viewport">
+        <div class="clinic-ticker__track">
+          <div class="clinic-ticker__group">
+            <span class="clinic-ticker__item">Appointment requests are welcome.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Clinic Hours: <span data-clinic-var="opening_hours">Mon - Fri: 8:00 AM - 6:30 PM | Sat: 9:00 AM - 2:00 PM</span></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Contact clinic for appointment assistance: <a href="tel:+15552345678" style="color:inherit;text-decoration:underline;" data-clinic-var="phone">+1 (555) 234-5678</a></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Explore our comprehensive medical services.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+          </div>
+          <div class="clinic-ticker__group" aria-hidden="true">
+            <span class="clinic-ticker__item">Appointment requests are welcome.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Clinic Hours: <span data-clinic-var="opening_hours">Mon - Fri: 8:00 AM - 6:30 PM | Sat: 9:00 AM - 2:00 PM</span></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Contact clinic for appointment assistance: <a href="tel:+15552345678" style="color:inherit;text-decoration:underline;" data-clinic-var="phone">+1 (555) 234-5678</a></span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+            <span class="clinic-ticker__item">Explore our comprehensive medical services.</span>
+            <span class="clinic-ticker__sep" aria-hidden="true">&bull;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="site-header" class="clinic-header" role="banner">
+    <div class="clinic-container clinic-header__inner">
+      <div class="clinic-header__brand">
+        <a href="index.html" class="clinic-logo-link" rel="home">
+          <span class="clinic-logo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+          <span class="clinic-logo-text">
+            <span class="clinic-name" data-clinic-var="clinic_name">[CLINIC NAME]</span>
+            <span class="clinic-tagline" data-clinic-var="specialty">Doctor &amp; Clinic Website Demo</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="clinic-nav" role="navigation">
+        <ul class="clinic-nav__menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Clinic</a></li>
+          <li><a href="doctor.html" class="is-active">Doctors</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="faq.html">Patient FAQs</a></li>
+          <li><a href="contact.html">Location &amp; Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="clinic-header__actions">
+        <a href="tel:+15552345678" class="clinic-header__phone d-none-tablet" title="Call Clinic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-clinic-var="phone">+1 (555) 234-5678</span>
+        </a>
+        <a href="appointment.html" class="clinic-btn clinic-btn--primary clinic-header__cta-btn" aria-label="Request Appointment">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="cta-text-full">Book Appointment</span>
+          <span class="cta-text-short">Book</span>
+        </a>
+        <button class="clinic-nav-toggle" id="clinic-nav-toggle" aria-expanded="false" aria-controls="clinic-mobile-drawer" aria-label="Toggle navigation menu">
+          <span class="clinic-nav-toggle__bar"></span>
+          <span class="clinic-nav-toggle__bar"></span>
+          <span class="clinic-nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="clinic-mobile-drawer" class="clinic-mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="clinic-mobile-drawer__overlay" id="clinic-drawer-overlay"></div>
+    <div class="clinic-mobile-drawer__content">
+      <div class="clinic-mobile-drawer__header">
+        <span class="clinic-name" data-clinic-var="clinic_name">[CLINIC NAME]</span>
+        <button class="clinic-mobile-drawer__close" id="clinic-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="clinic-mobile-drawer__body">
+        <ul class="clinic-mobile-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Clinic</a></li>
+          <li><a href="doctor.html" class="is-active">Our Doctors</a></li>
+          <li><a href="service.html">Services &amp; Treatments</a></li>
+          <li><a href="faq.html">Patient FAQs</a></li>
+          <li><a href="contact.html">Location &amp; Timings</a></li>
+          <li><a href="privacy-policy.html">Privacy &amp; Patient Rights</a></li>
+        </ul>
+
+        <div class="clinic-mobile-drawer__actions">
+          <a href="appointment.html" class="clinic-btn clinic-btn--primary clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Request Appointment</span>
+          </a>
+          <a href="tel:+15552345678" class="clinic-btn clinic-btn--outline clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call: <span data-clinic-var="phone">+1 (555) 234-5678</span></span>
+          </a>
+          <a href="https://wa.me/15552345678" target="_blank" rel="noopener noreferrer" class="clinic-btn clinic-btn--whatsapp clinic-btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="clinic-page" role="main">
+    <div class="clinic-container clinic-py-6">
+      <nav class="clinic-breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> &gt;
+        <a href="doctor.html">Doctors</a> &gt;
+        <span aria-current="page" data-clinic-var="doctor_name">Attending Doctor Profile</span>
+      </nav>
+
+      <div class="clinic-doctor-single-layout">
+        <aside class="clinic-doctor-single-sidebar">
+          <div class="clinic-doctor-single-img-card">
+            <!-- Featured Folder Asset: Friendly Doctor in a Modern Clinic.png -->
+            <img src="assets/images/doctor-hero.png" alt="Doctor profile photograph" width="1448" height="1086" class="clinic-rounded-card clinic-shadow-md">
+          </div>
+          
+          <div class="clinic-card clinic-mt-4">
+            <h4>Consultation Details</h4>
+            <p class="clinic-text-sm clinic-mb-2"><strong>Location:</strong> <span data-clinic-var="address">Suite 400, Medical Arts Pavilion</span></p>
+            <p class="clinic-text-sm clinic-mb-2"><strong>Hours:</strong> Mon - Fri: 9:00 AM - 5:00 PM</p>
+            <p class="clinic-text-sm clinic-mb-4"><strong>Languages:</strong> <span data-clinic-var="doctor_lang">English, Spanish</span></p>
+            <a href="appointment.html" class="clinic-btn clinic-btn--primary clinic-btn--full">
+              <span>Book Visit with Doctor</span>
+            </a>
+          </div>
+        </aside>
+
+        <article class="clinic-doctor-single-main">
+          <span class="clinic-specialty-pill" data-clinic-var="doctor_spec">Senior Consultant Physician</span>
+          <h1 class="clinic-page-title clinic-mb-2" data-clinic-var="doctor_name">Dr. Jonathan Miller, MD</h1>
+          <p class="clinic-doctor-qual clinic-mb-2" data-clinic-var="doctor_qual">MBBS, MD (Internal Medicine), FACP</p>
+          <p class="clinic-doctor-reg clinic-mb-4">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Verified Council Registration: <strong data-clinic-var="doctor_reg">State Medical Council Reg. No. MC-849204</strong></span>
+          </p>
+
+          <hr class="clinic-divider">
+
+          <h3>Professional Biography</h3>
+          <div class="clinic-body-text clinic-mb-6">
+            <p data-clinic-var="doctor_bio">
+              Dedicated to holistic, evidence-based patient healthcare with a focus on comprehensive preventive medicine, chronic illness management, and patient-centered diagnostic consultations.
+            </p>
+            <p>
+              Dr. Miller works in close collaboration with the clinic's allied health professionals and diagnostic partners to deliver seamless multidisciplinary care. Clinical investigations are pursued with precision and transparent dialogue, ensuring that each patient is fully informed at every juncture of their health journey.
+            </p>
+          </div>
+
+          <h3>Clinical Focus Areas</h3>
+          <div class="clinic-focus-grid clinic-mb-6">
+            <div class="clinic-pillar-mini" style="background:#f8fafc; padding:12px 16px; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong>Diagnostic Consultations</strong>
+              <p class="clinic-text-sm clinic-text-muted">In-depth physical examination and clinical symptom review.</p>
+            </div>
+            <div class="clinic-pillar-mini" style="background:#f8fafc; padding:12px 16px; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong>Preventive Screenings</strong>
+              <p class="clinic-text-sm clinic-text-muted">Early identification of physiological risk markers.</p>
+            </div>
+            <div class="clinic-pillar-mini" style="background:#f8fafc; padding:12px 16px; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong>Chronic Illness Care</strong>
+              <p class="clinic-text-sm clinic-text-muted">Structured long-term management and medication reviews.</p>
+            </div>
+            <div class="clinic-pillar-mini" style="background:#f8fafc; padding:12px 16px; border-radius:8px; border:1px solid #e2e8f0;">
+              <strong>Lifestyle Health Coaching</strong>
+              <p class="clinic-text-sm clinic-text-muted">Individualized nutritional and ergonomic guidance.</p>
+            </div>
+          </div>
+
+          <div class="clinic-cta-card clinic-mt-6" style="background:linear-gradient(135deg, var(--clinic-primary), var(--clinic-secondary)); color:#ffffff; padding:28px; border-radius:12px;">
+            <h3 style="color:#ffffff;">Schedule a Consultation</h3>
+            <p style="color:#e2e8f0;">Appointments are scheduled with generous consultation duration to ensure all questions are answered.</p>
+            <a href="appointment.html" class="clinic-btn clinic-btn--white clinic-mt-3">
+              <span>Request Consultation Slot &rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="site-footer" class="clinic-footer" role="contentinfo">
+    <div class="clinic-container clinic-footer__top">
+      <p class="clinic-footer__copy">&copy; 2026 <span data-clinic-var="clinic_name">[CLINIC NAME]</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Action Bar -->
+  <div class="clinic-mobile-bar" aria-label="Mobile quick actions">
+    <a href="tel:+15552345678" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/15552345678" target="_blank" rel="noopener noreferrer" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--wa">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="appointment.html" class="clinic-mobile-bar__btn clinic-mobile-bar__btn--book">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Visit</span>
+    </a>
+  </div>
+
+  <script src="assets/js/clinic-main.js"></script>
+  <script src="assets/js/preview-engine.js"></script>
+</body>
+</html>
